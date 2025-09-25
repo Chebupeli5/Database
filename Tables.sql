@@ -89,6 +89,35 @@ CREATE TABLE "Huyatina".categories (
 );
 
 
+-- "Huyatina".categorylimit определение
+
+-- Drop table
+
+-- DROP TABLE "Huyatina".categorylimit;
+
+CREATE TABLE "Huyatina".categorylimit (
+	user_id int4 NOT NULL,
+	category_id int4 NOT NULL,
+	"limit" money NOT NULL,
+	CONSTRAINT categorylimit_categories_fk FOREIGN KEY (category_id) REFERENCES "Huyatina".categories(category_id),
+	CONSTRAINT categorylimit_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+);
+
+
+-- "Huyatina".assets определение
+
+-- Drop table
+
+-- DROP TABLE "Huyatina".assets;
+
+CREATE TABLE "Huyatina".assets (
+	user_id int4 NOT NULL,
+	"name" text NOT NULL,
+	balance int4 NOT NULL,
+	CONSTRAINT assets_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+);
+
+
 -- "Huyatina".operations определение
 
 -- Drop table
@@ -104,4 +133,17 @@ CREATE TABLE "Huyatina".operations (
 	"date" date NOT NULL,
 	CONSTRAINT operations_categories_fk FOREIGN KEY (category_id) REFERENCES "Huyatina".categories(category_id),
 	CONSTRAINT operations_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+);
+
+
+-- "Huyatina".reports определение
+
+-- Drop table
+
+-- DROP TABLE "Huyatina".reports;
+
+CREATE TABLE "Huyatina".reports (
+	user_id int4 NOT NULL,
+	file json NOT NULL,
+	CONSTRAINT reports_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
 );
