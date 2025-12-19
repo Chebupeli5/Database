@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina".categories (category_id,user_id,"name",balance) VALUES
+INSERT INTO "Financik".categories (category_id,user_id,"name",balance) VALUES
 	 (1,1,'Продукты',15 000,00 ?),
 	 (2,1,'Развлечения',7 000,00 ?),
 	 (3,2,'Транспорт',5 000,00 ?),
