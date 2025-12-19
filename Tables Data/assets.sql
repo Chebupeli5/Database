@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina".assets (user_id,"name",balance) VALUES
+INSERT INTO "Financik".assets (user_id,"name",balance) VALUES
 	 (1,'Гараж',500000),
 	 (2,'Автомобиль Toyota',1500000),
 	 (3,'Ноутбук',80000),
