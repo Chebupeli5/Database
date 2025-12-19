@@ -1,10 +1,10 @@
--- "Huyatina"."Users" определение
+-- "Financik"."Users" определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina"."Users";
+-- DROP TABLE "Financik"."Users";
 
-CREATE TABLE "Huyatina"."Users" (
+CREATE TABLE "Financik"."Users" (
 	user_id int4 NOT NULL,
 	login varchar NOT NULL,
 	"password" varchar NOT NULL,
@@ -15,135 +15,135 @@ CREATE TABLE "Huyatina"."Users" (
 );
 
 
--- "Huyatina"."Financial Goals" определение
+-- "Financik"."Financial Goals" определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina"."Financial Goals";
+-- DROP TABLE "Financik"."Financial Goals";
 
-CREATE TABLE "Huyatina"."Financial Goals" (
+CREATE TABLE "Financik"."Financial Goals" (
 	user_id int4 NOT NULL,
 	goal_name text NOT NULL,
 	goal int4 NOT NULL,
-	CONSTRAINT financial_goals_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT financial_goals_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina"."Loans" определение
+-- "Financik"."Loans" определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina"."Loans";
+-- DROP TABLE "Financik"."Loans";
 
-CREATE TABLE "Huyatina"."Loans" (
+CREATE TABLE "Financik"."Loans" (
 	user_id int4 NOT NULL,
 	credit_name text NOT NULL,
 	loan_balance money NULL,
 	loan_payment money NOT NULL,
 	payment_date date NOT NULL,
-	CONSTRAINT loans_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT loans_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina"."Notifications" определение
+-- "Financik"."Notifications" определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina"."Notifications";
+-- DROP TABLE "Financik"."Notifications";
 
-CREATE TABLE "Huyatina"."Notifications" (
+CREATE TABLE "Financik"."Notifications" (
 	user_id int4 NOT NULL,
 	message text NOT NULL,
-	CONSTRAINT notifications_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT notifications_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina"."Savings Accounts" определение
+-- "Financik"."Savings Accounts" определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina"."Savings Accounts";
+-- DROP TABLE "Financik"."Savings Accounts";
 
-CREATE TABLE "Huyatina"."Savings Accounts" (
+CREATE TABLE "Financik"."Savings Accounts" (
 	user_id int4 NOT NULL,
 	saving_name text NOT NULL,
 	balance money NOT NULL,
 	interest_rate int2 NOT NULL,
-	CONSTRAINT savings_accounts_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT savings_accounts_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina".categories определение
+-- "Financik".categories определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina".categories;
+-- DROP TABLE "Financik".categories;
 
-CREATE TABLE "Huyatina".categories (
+CREATE TABLE "Financik".categories (
 	category_id int4 NOT NULL,
 	user_id int4 NOT NULL,
 	"name" text NOT NULL,
 	balance money NOT NULL,
 	CONSTRAINT categories_pk PRIMARY KEY (category_id),
-	CONSTRAINT categories_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT categories_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina".categorylimit определение
+-- "Financik".categorylimit определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina".categorylimit;
+-- DROP TABLE "Financik".categorylimit;
 
-CREATE TABLE "Huyatina".categorylimit (
+CREATE TABLE "Financik".categorylimit (
 	user_id int4 NOT NULL,
 	category_id int4 NOT NULL,
 	"limit" money NOT NULL,
-	CONSTRAINT categorylimit_categories_fk FOREIGN KEY (category_id) REFERENCES "Huyatina".categories(category_id),
-	CONSTRAINT categorylimit_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT categorylimit_categories_fk FOREIGN KEY (category_id) REFERENCES "Financik".categories(category_id),
+	CONSTRAINT categorylimit_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina".assets определение
+-- "Financik".assets определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina".assets;
+-- DROP TABLE "Financik".assets;
 
-CREATE TABLE "Huyatina".assets (
+CREATE TABLE "Financik".assets (
 	user_id int4 NOT NULL,
 	"name" text NOT NULL,
 	balance int4 NOT NULL,
-	CONSTRAINT assets_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT assets_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina".operations определение
+-- "Financik".operations определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina".operations;
+-- DROP TABLE "Financik".operations;
 
-CREATE TABLE "Huyatina".operations (
+CREATE TABLE "Financik".operations (
 	operation_id int4 NOT NULL,
 	user_id int4 NOT NULL,
 	category_id int4 NOT NULL,
 	"type" varchar NOT NULL,
 	"transaction" int4 NOT NULL,
 	"date" date NOT NULL,
-	CONSTRAINT operations_categories_fk FOREIGN KEY (category_id) REFERENCES "Huyatina".categories(category_id),
-	CONSTRAINT operations_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT operations_categories_fk FOREIGN KEY (category_id) REFERENCES "Financik".categories(category_id),
+	CONSTRAINT operations_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
 
 
--- "Huyatina".reports определение
+-- "Financik".reports определение
 
 -- Drop table
 
--- DROP TABLE "Huyatina".reports;
+-- DROP TABLE "Financik".reports;
 
-CREATE TABLE "Huyatina".reports (
+CREATE TABLE "Financik".reports (
 	user_id int4 NOT NULL,
 	file json NOT NULL,
-	CONSTRAINT reports_users_fk FOREIGN KEY (user_id) REFERENCES "Huyatina"."Users"(user_id)
+	CONSTRAINT reports_users_fk FOREIGN KEY (user_id) REFERENCES "Financik"."Users"(user_id)
 );
