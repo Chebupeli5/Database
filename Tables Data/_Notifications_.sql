@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina"."Notifications" (user_id,message) VALUES
+INSERT INTO "Financik"."Notifications" (user_id,message) VALUES
 	 (1,'Напоминание: внесите платеж по ипотеке до 01.10.2025'),
 	 (2,'Скоро платеж по автокредиту (05.10.2025)'),
 	 (3,'Остаток по кредиту: 120000'),
