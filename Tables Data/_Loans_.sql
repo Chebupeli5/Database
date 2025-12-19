@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina"."Loans" (user_id,credit_name,loan_balance,loan_payment,payment_date) VALUES
+INSERT INTO "Financik"."Loans" (user_id,credit_name,loan_balance,loan_payment,payment_date) VALUES
 	 (1,'Ипотека',3 500 000,00 ?,40 000,00 ?,'2025-10-01'),
 	 (2,'Автокредит',700 000,00 ?,15 000,00 ?,'2025-10-05'),
 	 (3,'Потребительский',120 000,00 ?,8 000,00 ?,'2025-10-10'),
