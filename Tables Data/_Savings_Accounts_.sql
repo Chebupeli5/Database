@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina"."Savings Accounts" (user_id,saving_name,balance,interest_rate) VALUES
+INSERT INTO "Financik"."Savings Accounts" (user_id,saving_name,balance,interest_rate) VALUES
 	 (1,'Накопительный рублевый',350 000,00 ?,5),
 	 (2,'Депозит евро',15 000,00 ?,2),
 	 (2,'Долларовый счет',12 000,00 ?,2),
