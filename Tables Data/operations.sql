@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina".operations (operation_id,user_id,category_id,"type","transaction","date") VALUES
+INSERT INTO "Financik".operations (operation_id,user_id,category_id,"type","transaction","date") VALUES
 	 (1,1,1,'Расход',3500,'2025-09-01'),
 	 (2,1,2,'Расход',2000,'2025-09-05'),
 	 (3,2,3,'Расход',1500,'2025-09-07'),
