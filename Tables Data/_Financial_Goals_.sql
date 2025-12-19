@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina"."Financial Goals" (user_id,goal_name,goal) VALUES
+INSERT INTO "Financik"."Financial Goals" (user_id,goal_name,goal) VALUES
 	 (1,'Купить авто',1200000),
 	 (1,'Путешествие',200000),
 	 (2,'Квартира',5000000),
