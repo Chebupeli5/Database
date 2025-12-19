@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina".categorylimit (user_id,category_id,"limit") VALUES
+INSERT INTO "Financik".categorylimit (user_id,category_id,"limit") VALUES
 	 (1,1,20 000,00 ?),
 	 (1,2,10 000,00 ?),
 	 (2,3,8 000,00 ?),
