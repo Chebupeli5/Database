@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina"."Users" (user_id,login,"password",visualname) VALUES
+INSERT INTO "Financik"."Users" (user_id,login,"password",visualname) VALUES
 	 (1,'ivanov','pass123','Иван Иванов'),
 	 (2,'petrova','qwerty','Анна Петрова'),
 	 (3,'sidorov','abc123','Петр Сидоров'),
