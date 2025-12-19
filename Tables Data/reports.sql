@@ -1,4 +1,4 @@
-INSERT INTO "Huyatina".reports (user_id,file) VALUES
+INSERT INTO "Financik".reports (user_id,file) VALUES
 	 (1,'{"report_id": "2025-09", "period": "Сентябрь 2025", "total_income": 120000, "total_expenses": 5500, "summary": "Цели по накоплению выполняются. Превышен лимит по развлечениям."}'),
 	 (2,'{"report_id": "2025-09", "period": "Сентябрь 2025", "total_income": 90000, "total_expenses": 6000, "summary": "Платежи по кредиту вносятся стабильно. Лимиты не превышены."}'),
 	 (3,'{"report_id": "2025-09", "period": "Сентябрь 2025", "total_income": 70000, "total_expenses": 2500, "summary": "Накопления на образование идут по плану."}'),
